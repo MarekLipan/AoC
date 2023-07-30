@@ -4,40 +4,21 @@ Solution for the day's puzzle
 
 import os
 from typing import List
+from utils.solver import Solver
 
 
-def solution(inp: List[str]):
+class TodaySolver(Solver):
     """
-    Solution for the day's puzzle
-    """
-
-    print(inp)
-
-    return None
-
-
-def main():
-    """
-    Function to solve the puzzle
+    Contains input and solution for today
     """
 
-    with open(
-        os.path.join(os.path.realpath(__file__), "../test_input.txt"),
-        "r",
-        encoding="utf-8",
-    ) as input_file:
-        task_test_input = input_file.readlines()
+    def solution(self, inp: List[str]):
+        """Placeholder for the solution function"""
 
-    with open(
-        os.path.join(os.path.realpath(__file__), "../input.txt"),
-        "r",
-        encoding="utf-8",
-    ) as input_file:
-        task_input = input_file.readlines()
+        print(inp)
 
-    print(f"Test input Solution: {solution(task_test_input)}")
-    print(f"Solution: {solution(task_input)}")
+        return None
 
 
-if __name__ == "__main__":
-    main()
+today_solver = TodaySolver(os.path.realpath(__file__))
+today_solver.solve_and_print_result(solve_main_task=False)
