@@ -17,14 +17,14 @@ class Solver:
             "r",
             encoding="utf-8",
         ) as input_file:
-            self.task_test_input = input_file.readlines()
+            self.task_test_input = input_file.read().splitlines()
 
         with open(
             os.path.join(path, "../input.txt"),
             "r",
             encoding="utf-8",
         ) as input_file:
-            self.task_input = input_file.readlines()
+            self.task_input = input_file.read().splitlines()
 
     def solution(self, inp: List[str]):
         """Placeholder for the solution function"""
