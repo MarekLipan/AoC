@@ -13,14 +13,14 @@ class Solver:
 
     def __init__(self, path: str):
         with open(
-            os.path.join(path, "../test_input.txt"),
+            os.path.join(os.path.dirname(path), "test_input.txt"),
             "r",
             encoding="utf-8",
         ) as input_file:
             self.task_test_input = input_file.read().splitlines()
 
         with open(
-            os.path.join(path, "../input.txt"),
+            os.path.join(os.path.dirname(path), "input.txt"),
             "r",
             encoding="utf-8",
         ) as input_file:
