@@ -33,11 +33,14 @@ class Solver:
 
         return None
 
-    def solve_and_print_result(self, solve_main_task: bool):
+    def solve_and_print_result(
+        self, solve_main_task: bool, solve_test_task: bool = True
+    ):
         """
         Function to solve the puzzle and print the solution
         """
 
-        print(f"Test input Solution: {self.solution(self.task_test_input)}")
+        if solve_test_task:
+            print(f"Test input Solution: {self.solution(self.task_test_input)}")
         if solve_main_task:
             print(f"Solution: {self.solution(self.task_input)}")

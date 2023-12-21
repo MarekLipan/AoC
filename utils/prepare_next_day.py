@@ -18,7 +18,7 @@ def main(year: str):
     if not os.path.exists(days_path):
         os.mkdir(days_path)
 
-    days_created = len(os.listdir(days_path))
+    days_created = len(set(os.listdir(days_path)) - {".DS_Store"})
 
     if days_created < 25:
         # Create the next day's folder
