@@ -6,7 +6,7 @@ import os
 import shutil
 import requests
 
-YEAR = 2023
+YEAR = 2024
 
 
 def main(year: str):
