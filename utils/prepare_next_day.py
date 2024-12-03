@@ -5,6 +5,7 @@ Next day preparation script.
 import os
 import shutil
 import requests
+from dotenv import load_dotenv
 
 YEAR = 2024
 
@@ -14,6 +15,8 @@ def main(year: str):
     Prepares the next day's folder, including copying the template solution file and
     downloading the input file.
     """
+    load_dotenv()
+
     days_path = os.path.join(os.getcwd(), "years", str(year))
     if not os.path.exists(days_path):
         os.mkdir(days_path)
